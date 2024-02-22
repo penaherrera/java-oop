@@ -5,8 +5,10 @@ public class Medico extends Persona{
     String especialidad;
     ArrayList <Paciente> pacientes;
 
-    public Medico(String nombre, int edad) {
+    public Medico(String nombre, int edad, String especialidad) {
         super(nombre, edad);
+        this.especialidad = especialidad;
+        this.pacientes = new ArrayList<>();
     }
 
     public void setEspecialidad(String titulo){
@@ -28,9 +30,7 @@ public class Medico extends Persona{
     }
 
     public void verExpediente(Paciente paciente){
-        System.out.println("Paciente registrado");
-        System.out.println("Nombre: " + paciente.getNombre());
-        System.out.println("Edad: " + paciente.getEdad());
-        System.out.println("Diagnostico: " + paciente.getDiagnostico());
+        JOptionPane.showMessageDialog(null, "Nombre: " + paciente.getNombre() + "\n"
+        + "Edad: " + paciente.getEdad() + "\n" + "Diagnostico: " + paciente.getDiagnostico());
     }
 }
